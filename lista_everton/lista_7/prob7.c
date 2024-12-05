@@ -1,20 +1,18 @@
 #include <stdio.h>
 
+int pontos(int n){
+    for(int i=0; i<n; i++){
+        for(int j=i+1; j>0; j--){
+            printf("!");
+        }
+        printf("\n");
+    }
+}
+
 int main(){
     int x;
     scanf("%d", &x);
-    int a = 0;
-    int b = 1;
-    int c = a+b;
-    int p = 2;
-    for(; c<x; p++){
-        a = b;
-        b = c;
-        c = a+b;
-
-    }
-    printf("Posição: %d\n", p);
-
+    int r = pontos(x);
 
     return 0;
 }

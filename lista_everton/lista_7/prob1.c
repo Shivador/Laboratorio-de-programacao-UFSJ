@@ -1,19 +1,16 @@
 #include <stdio.h>
 
+float temp(float f){
+    float c = (f-32.0) * (5.0/9.0);
+    return c;
+}
+
 int main(){
-    int qnt = 0;
-        for(int i=1; i<=1000; i++){
-            if(i%7==0){
-                qnt+=1;
-            } else{
-                continue;
-            }
-        }
-        printf("%d\n", qnt);
-
-
-
-   
+    float x;
+    printf("Fahrenheit: ");
+    scanf("%f", &x);
+    float r = temp(x);
+    printf("Celsius: %.2f\n", r);
 
     return 0;
 }
